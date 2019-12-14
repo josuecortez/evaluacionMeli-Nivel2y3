@@ -1,0 +1,12 @@
+{
+    "name": "evaluacion-meli",
+    "version": 2,
+    "builds": [{"src": "server.js", "use": "@now/node"}],
+    "routes": [{"src": "/(.*)", "dest": "/server.js"}],
+    "env":{
+     "DB_USER":"db_user_meli",
+     "DB_PASSWORD":"db_user_meli",
+     "DB_HOST":"clustermeli-uxmue.mongodb.net",
+     "DB_NAME":"db_EvMeli"
+    }
+}
