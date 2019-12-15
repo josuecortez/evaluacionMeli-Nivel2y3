@@ -3,27 +3,24 @@ const Model = require('../utils/schema/mutant');
 var isMutant;
 var coincidencias = 0;
 class MutantService {
-    // constructor() {
-    //     this.collection = 'mutant';
-    //     this.mongoDB = new MongoLib();
-    // }
     firstCheck(dna, req, res) {
         return new Promise((resolve, reject) => {
-            if (!dna) {
-                console.error('[mutantController] Los datos son vacíos')
+            console.log(dna)
+            if (!dna || dna.length === 0) {
+                console.error('[mutantController] The data is empty')
                 reject('Los datos son vacíos.');
                 return false;
             }
             let check = this.checkMutant(dna);
             if (!check) {
-                console.error('[mutantController] No cumple con las dimensiones nxn o no cumple con los caracteres A T C G');
-                reject('No cumple con las dimensiones nxn o no cumple con los caracteres A T C G');
+                console.error('[mutantController] Does not comply with the DNA chain - A T C G');
+                reject('The array does not meet the nxn dimension or does not meet the DNA chain A T C G');
                 return false;
             }
             let checkLenght = this.checkLength(dna);
             if (!checkLenght) {
-                console.error('[mutantController] El tamaño de cada fila debe ser mayor o igual a 4');
-                reject('[mutantController] El tamaño de cada fila debe ser mayor o igual a 4');
+                console.error('[mutantController] The size of each row must be greater than or equal to 4');
+                reject('[mutantController] The size of each row must be greater than or equal to 4');
                 return false;
             }
             let isMutant = this.isMutant(dna);
@@ -209,10 +206,6 @@ class MutantService {
         return false
     }
 }
-//isMutant: isMutant,
-//    checkMutant: checkMutant,
-//    checkValidCharacter: checkValidCharacter,
-//    checkLength: checkLength,
 module.exports = {
     MutantService
 };

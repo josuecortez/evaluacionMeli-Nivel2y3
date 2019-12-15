@@ -29,10 +29,6 @@
   "author": "",
   "license": "ISC",
   "nyc": {
-    "all": true,
-    "include": [
-      "routes",
-      "services"
-    ]
+    "all": true
   }
 }
