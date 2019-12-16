@@ -1,1 +1,28 @@
-# evaluacionMeli-Nivel2
+# Evaluación Meli- Nivel 2 
+
+## Intructions to run 
+1. Clone or download the project
+2. Open and run in the terminal the comand `npm i -g install`
+3. Runs the program with the following command `node server` or `nodemon server`
+
+## HTTP's Request
+### 1. /mutant
+1. 1 Make a http **POST** in the following link http://localhost:3000/mutant
+----
+#### Data to send
+Example: the data must be in json format
+````
+{
+	"dna": ["AAAA","CCAA","CCCC","ACAG"]
+}
+````
+1. 2 The database shows the following result
+````
+{
+"_id":{"$oid":"5df6a9ee4490e225d040a0a0"},
+"dna":["AAAA","CCAA","CCCC","ACAG"],
+"mutant":true}
+}
+````
+### 2. /stats
+2. 1 Make a http **GET** in the following link http://localhost:3000/stats
