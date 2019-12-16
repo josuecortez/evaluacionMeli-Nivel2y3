@@ -1,9 +1,10 @@
 # Evaluación Meli- Nivel 2 y Nivel 3
 
 ## Intructions to run 
-1. Clone or download the project
-2. Open and run in the terminal the comand `npm install --save`
-3. Runs the program with the following command `node server` or `nodemon server`
+1. Download and install Node js in the next link https://nodejs.org/es/download/
+2. Clone or download the project
+3. Open and run in the terminal the comand `npm install --save`
+4. Runs the program with the following command `node server` or `nodemon server`
 
 ## Intructions to run test
 1. In the terminal run `npm run test`
