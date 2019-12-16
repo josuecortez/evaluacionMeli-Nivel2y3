@@ -2,7 +2,7 @@
 
 ## Intructions to run 
 1. Clone or download the project
-2. Open and run in the terminal the comand `npm i -g install --save`
+2. Open and run in the terminal the comand `npm install --save`
 3. Runs the program with the following command `node server` or `nodemon server`
 
 ## Intructions to run test
