@@ -5,6 +5,10 @@
 2. Open and run in the terminal the comand `npm i -g install`
 3. Runs the program with the following command `node server` or `nodemon server`
 
+## Intructions to run test
+1. In the terminal run `npm run test`
+2. To observe the covered code run `npm run cover` or the command to view the report `npm run report`
+
 ## HTTP's Request
 ### 1. /mutant
 1. 1 Make a http **POST** in the following link http://localhost:3000/mutant
