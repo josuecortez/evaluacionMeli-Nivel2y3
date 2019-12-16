@@ -11,7 +11,10 @@
     "express": "^4.17.1",
     "mocha": "^6.2.2",
     "mongodb": "^3.4.0",
-    "mongoose": "^5.8.0",
+    "mongoose": "^5.8.0"
+    
+  },
+  "devDependencies": {
     "nodemon": "^2.0.2",
     "nyc": "^14.1.1",
     "prettier": "^1.19.1",
@@ -19,14 +22,13 @@
     "sinon": "^7.5.0",
     "supertest": "^4.0.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "mocha --timeout 15000 --exit",
     "cover": "nyc npm run test",
     "report": "nyc report --reporter=html && start coverage/index.html"
   },
   "keywords": [],
-  "author": "",
+  "author": "Josué Ismael Cortez",
   "license": "ISC",
   "nyc": {
     "all": true

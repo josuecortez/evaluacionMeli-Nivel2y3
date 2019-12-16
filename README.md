@@ -2,7 +2,7 @@
 
 ## Intructions to run 
 1. Clone or download the project
-2. Open and run in the terminal the comand `npm i -g install`
+2. Open and run in the terminal the comand `npm i -g install --save`
 3. Runs the program with the following command `node server` or `nodemon server`
 
 ## Intructions to run test
@@ -25,8 +25,21 @@ Example: the data must be in json format
 {
 "_id":{"$oid":"5df6a9ee4490e225d040a0a0"},
 "dna":["AAAA","CCAA","CCCC","ACAG"],
-"mutant":true}
+"mutant":true
 }
 ````
 ### 2. /stats
 2. 1 Make a http **GET** in the following link http://localhost:3000/stats
+
+## Host
+ The api is hosted in the following link https://evaluacion-meli.josuecortez92.now.sh
+ ### Instruction for stats in the host
+ 1. Following the next link https://evaluacion-meli.josuecortez92.now.sh/stats to observe the statistics
+ 2. Following the next link https://evaluacion-meli.josuecortez92.now.sh/mutant and send a data in json format to add DNA
+ ````
+ {
+ "count_mutant_dna":17,
+ "count_human_dna":8,
+ "ratio":2.125
+ }
+ ````
