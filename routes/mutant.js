@@ -19,8 +19,7 @@ function mutantApi(app){
             })
             .catch(err => {
                 response.error(req,res,'[MutantRoutes]: ' + err, 500, err);
-            })
-    
+            })   
     });
 
     router.get('/stats',function(req,res){

@@ -2,8 +2,8 @@ const Model = require('../utils/schema/mutant');
 
 class StatsServices {
     async getStats(){
-        const total = await Model.find({}).count();
-        const mutants = await Model.find({mutant: false}).count();
+        const total = await Model.find({}).countDocuments();
+        const mutants = await Model.find({mutant: true}).countDocuments();
         const human = total - mutants;
         const ratio = mutants/ human;
         const result = {

@@ -5,22 +5,21 @@ var coincidencias = 0;
 class MutantService {
     firstCheck(dna, req, res) {
         return new Promise((resolve, reject) => {
-            console.log(dna)
             if (!dna || dna.length === 0) {
-                console.error('[mutantController] The data is empty')
+                console.error('[mutantServices] The data is empty')
                 reject('Los datos son vacíos.');
                 return false;
             }
             let check = this.checkMutant(dna);
             if (!check) {
-                console.error('[mutantController] Does not comply with the DNA chain - A T C G');
+                console.error('[mutantServices] Does not comply with the DNA chain - A T C G');
                 reject('The array does not meet the nxn dimension or does not meet the DNA chain A T C G');
                 return false;
             }
             let checkLenght = this.checkLength(dna);
             if (!checkLenght) {
-                console.error('[mutantController] The size of each row must be greater than or equal to 4');
-                reject('[mutantController] The size of each row must be greater than or equal to 4');
+                console.error('[mutantServices] The size of each row must be greater than or equal to 4');
+                reject('[mutantServices] The size of each row must be greater than or equal to 4');
                 return false;
             }
             let isMutant = this.isMutant(dna);
@@ -171,6 +170,7 @@ class MutantService {
             charDiagonalSuperior += char;
             iteration++;
         }
+        
         diagonalSuperior.push(charDiagonalSuperior);
         return diagonalSuperior;
     }
@@ -181,7 +181,6 @@ class MutantService {
             var char = array[iteracion].charAt(i);
             charDiagonalInferior += char;
             iteracion++;
-
         }
         diagonalInferior.push(charDiagonalInferior);
         return diagonalInferior;
