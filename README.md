@@ -33,7 +33,7 @@ Example: the data must be in json format
 
 ## Host
  The api is hosted in the following link https://evaluacion-meli.josuecortez92.now.sh
- ### Instruction for stats in the host
+ ### Instruction for run url in the host
  1. Following the next link https://evaluacion-meli.josuecortez92.now.sh/stats to observe the statistics
  2. Following the next link https://evaluacion-meli.josuecortez92.now.sh/mutant and send a data in json format to add DNA
  ````
